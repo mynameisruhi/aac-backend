@@ -1,0 +1,12 @@
+{
+  "name": "aac-backend",
+  "version": "1.0.0",
+  "description": "Backend API for AAC Communication Tool",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
