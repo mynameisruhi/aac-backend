@@ -1,10 +1,8 @@
 export default async function handler(req, res) {
-  // Enable CORS - must be first
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  // Handle preflight request
   if (req.method === 'OPTIONS') {
     res.status(200).end();
     return;
@@ -48,8 +46,6 @@ Example format:
     );
 
     const data = await response.json();
-    
-    // Extract text from Gemini response
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "[]";
     
     res.status(200).json({ text });
